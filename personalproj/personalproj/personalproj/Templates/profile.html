@@ -1,0 +1,176 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile Page</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Times New Roman', serif;
+            color: #4b4b4b;
+        }
+
+        .background-div {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom right, #f4f1e1, #c4a48f); /* Elegant cream and brown gradient */
+            z-index: -1;
+            opacity: 1; /* Full opacity for a solid background */
+        }
+
+        nav ul {
+            background-color: #5a3d3d;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            margin: 0;
+            padding: 10px 0;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            font-family: 'Times New Roman', serif;
+        }
+
+        nav ul li {
+            list-style: none;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 18px;
+            padding: 10px 20px;
+            display: inline-block;
+            transition: background-color 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: #9c7a66;
+            border-radius: 5px;
+        }
+
+        .centered-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            width: 60%;
+        }
+
+        button {
+            padding: 15px 30px;
+            font-size: 18px;
+            cursor: pointer;
+            border: 2px solid #3e2c41;
+            border-radius: 5px;
+            background-color: #f5e1b7;
+            color: #3e2c41;
+            font-family: 'Georgia', serif;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #d7b68f;
+            color: #fff;
+            transform: translateY(-2px);
+        }
+
+        .bn5 {
+            padding: 15px 35px;
+            font-size: 16px;
+            cursor: pointer;
+            border: 2px solid #800080;
+            border-radius: 10px;
+            background: #f7e2e2;
+            color: #3e2c41;
+            font-family: 'Georgia', serif;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            transition: background 0.3s ease;
+        }
+
+        .bn5:hover {
+            background: #9b6e61;
+            color: #fff;
+        }
+
+        .bn5:before {
+            content: "";
+            background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            background-size: 400%;
+            z-index: -1;
+            filter: blur(5px);
+            width: calc(100% + 4px);
+            height: calc(100% + 4px);
+            animation: glowingbn5 20s linear infinite;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+            border-radius: 10px;
+        }
+
+        @keyframes glowingbn5 {
+            0% {
+                background-position: 0 0;
+            }
+            50% {
+                background-position: 400% 0;
+            }
+            100% {
+                background-position: 0 0;
+            }
+        }
+
+        .bn5:hover:before {
+            opacity: 1;
+        }
+
+        .bn5:after {
+            z-index: -1;
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: #f5e1b7;
+            left: 0;
+            top: 0;
+            border-radius: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="background-div"></div>
+
+    <nav>
+        <ul id="navbar">
+
+
+            <li><a href="/path26/">LOG OUT</a></li>
+            <li><a href="/path27/">ABOUT US</a></li>
+        </ul>
+    </nav>
+
+    <div class="centered-button">
+        <a href="/path3/"><button class="bn5">Upload Data</button></a>
+        <a href="/path5/"><button class="bn5">Upload Education Data</button></a>
+        <a href="/path4/"><button class="bn5">Display Data</button></a>
+        <a href="/path6/"><button class="bn5">Display Education Data</button></a>
+        <a href="/path7/"><button class="bn5">Upload Medical Data</button></a>
+        <a href="/path8/"><button class="bn5">Display Medical Data</button></a>
+        <a href="/path9/"><button class="bn5">Financial Data Form</button></a>
+        <a href="/path10/"><button class="bn5">Show Financial Details</button></a>
+        <a href="/path14/"><button class="bn5">Upload Family Details</button></a>
+        <a href="/path15/"><button class="bn5">Show Family Details</button></a>
+    </div>
+</body>
+</html>

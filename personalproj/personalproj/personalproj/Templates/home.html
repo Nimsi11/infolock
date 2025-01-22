@@ -1,0 +1,87 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Stylish Buttons</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: lavender; /* Lavender background */
+            background-image: url('{% static "img 26.jpg" %}'); /* Add the image path here */
+            background-position: right center;
+            background-size: cover; /* Cover the full page */
+            background-attachment: fixed; /* Keeps the image fixed when scrolling */
+            color: #333; /* Default text color */
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start; /* Align items to the left */
+            justify-content: center;
+            height: 100vh; /* Full viewport height */
+            padding-left: 20px; /* Slight left shift */
+        }
+
+        h1 {
+            text-align: center;
+            font-weight: bold;
+            color: white;
+            margin-top: 20px; /* Adds a little space from the top */
+        }
+
+        button {
+            padding: 20px 40px; /* Make buttons larger */
+            background: linear-gradient(45deg, #FF69B4, #BA55D3); /* Stylish gradient */
+            border: none;
+            border-radius: 50px; /* Rounded button */
+            color: white;
+            font-size: 1.8rem; /* Larger font size */
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            text-transform: uppercase;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            margin-top: 20px; /* Adds space between buttons and the heading */
+        }
+
+        button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 300%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.2);
+            transform: skewX(-45deg);
+            transition: all 0.6s ease;
+        }
+
+        button:hover::before {
+            left: 100%;
+        }
+
+        button:hover {
+            transform: translateY(-5px); /* Lift effect */
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        button + button {
+            margin-left: 20px; /* Space between buttons */
+        }
+    </style>
+</head>
+<body>
+<h1>INFOLOCK</h1>
+
+<button onclick="window.location.href='path1'">Sign Up</button>
+<button onclick="window.location.href='path2'">Login</button>
+</body>
+</html>

@@ -1,0 +1,121 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Educational Details Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background-image: url('{% static "imgper.webp" %}');
+            background-size: cover;
+            background-position: center;
+
+        }
+        h1 {
+            background-color: #e1bee7;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        form {
+            width: 60%;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            font-family:'poppins',sans-serif
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        input[type="text"], input[type="number"], input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background-color: #e1bee7; /* Light Lavender */
+            border: 1px solid #7e57c2; /*
+        }
+        input[type="submit"] {
+            background-color: #87ceeb;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #5ca4c1;
+        }
+        .section {
+            margin-bottom: 30px;
+            border: 1px solid #ccc;
+            padding: 15px;
+            border-radius: 4px;
+
+        }
+        .section h2 {
+            margin-top: 0;
+            color: #555;
+            font-family:'poppins',san
+        }
+    </style>
+</head>
+<body>
+    <h1>Educational Details Form</h1>
+    <form method="POST" action="" enctype="multipart/form-data">
+        {% csrf_token %}
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name1" placeholder="Enter your full name" required>
+
+        <div class="section">
+            <h2>SSLC Details</h2>
+            <label for="sslc_school">School Name</label>
+            <input type="text" id="sslc_school" name="name2" placeholder="Enter SSLC school name">
+
+            <label for="sslc_year">Year of Passing</label>
+            <input type="number" id="sslc_year" name="name3" placeholder="Enter year of passing">
+
+            <label for="sslc_percentage">Percentage</label>
+            <input type="number" id="sslc_percentage" name="name4" step="0.01" placeholder="Enter percentage">
+        </div>
+
+        <div class="section">
+            <h2>+2 Details</h2>
+            <label for="plus_two_school">School Name</label>
+            <input type="text" id="plus_two_school" name="name5" placeholder="Enter +2 school name">
+
+            <label for="plus_two_year">Year of Passing</label>
+            <input type="number" id="plus_two_year" name="name6" placeholder="Enter year of passing">
+
+            <label for="plus_two_percentage">Percentage</label>
+            <input type="number" id="plus_two_percentage" name="name7" step="0.01" placeholder="Enter percentage">
+        </div>
+
+        <div class="section">
+            <h2>Degree Details</h2>
+            <label for="degree_college">College Name</label>
+            <input type="text" id="degree_college" name="name8" placeholder="Enter college name">
+
+            <label for="degree_course">Course</label>
+            <input type="text" id="degree_course" name="name9" placeholder="Enter course">
+
+            <label for="degree_year">Year of Passing</label>
+            <input type="number" id="degree_year" name="name10" placeholder="Enter year of passing">
+
+            <label for="degree_percentage">Percentage</label>
+            <input type="number" id="degree_percentage" name="name11" step="0.01" placeholder="Enter percentage">
+        </div>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

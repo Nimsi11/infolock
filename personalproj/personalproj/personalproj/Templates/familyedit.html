@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Family Table Form</title>
+</head>
+<body>
+    <h1>Family Table Form</h1>
+
+    <!-- Form to collect family data -->
+    <form method="POST" action="">
+        {% csrf_token %}
+
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name1" required value="{{ key9.Name }}"><br><br>
+
+        <label for="father_name">Father's Name:</label>
+        <input type="text" id="father_name" name="name2" value="{{ key9.father_name }}"><br><br>
+
+        <label for="mother_name">Mother's Name:</label>
+        <input type="text" id="mother_name" name="name3" value="{{ key9.mother_name }}" ><br><br>
+
+        <label for="marital_status">Marital Status:</label><br>
+        <input type="radio" id="single" name="name4" value="{{ key9.marital_status }}">
+        <label for="single">Single</label><br>
+        <input type="radio" id="married" name="name4" value="Married">
+        <label for="married">Married</label><br><br>
+
+        <label for="spouse_name">Spouse Name (if any):</label>
+        <input type="text" id="spouse_name" name="name5" value="{{ key9.spouse_name }}"><br><br>
+
+        <label for="number_of_children">Number of Children:</label>
+        <input type="number" id="number_of_children" name="name6" value="{{ key9.number_of_children }}"><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+</body>
+</html>
